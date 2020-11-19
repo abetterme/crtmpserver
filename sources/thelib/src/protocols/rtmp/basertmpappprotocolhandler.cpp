@@ -808,6 +808,8 @@ bool BaseRTMPAppProtocolHandler::ProcessInvoke(BaseRTMPProtocol *pFrom,
 		return ProcessInvokeCheckBandwidth(pFrom, request);
 	} else if (functionName == RM_INVOKE_FUNCTION_ONFCPUBLISH) {
 		return ProcessInvokeOnFCPublish(pFrom, request);
+	} else if (functionName == RM_INVOKE_FUNCTION_CHECKBW) {
+		return ProcessInvokeCheckBandwidth(pFrom, request);
 	} else {
 		return ProcessInvokeGeneric(pFrom, request);
 	}
